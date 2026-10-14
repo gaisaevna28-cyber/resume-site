@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Кандидаты — Отбор аналитиков</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="candidates">
+<header class="site-header"><div class="wrap header-in">
+  <a class="brand" href="index.html"><span class="brand-mark"><svg class="ic"><use href="#i-users"/></svg></span><span class="brand-text">Отбор аналитиков<small>Senior / Strong Senior</small></span></a>
+  <button class="nav-toggle" aria-label="Меню" aria-expanded="false"><svg class="ic"><use href="#i-menu"/></svg></button>
+  <nav class="nav" id="nav">
+    <a href="index.html" data-nav="home"><svg class="ic"><use href="#i-home"/></svg>Главная</a>
+    <a href="candidates.html" data-nav="candidates"><svg class="ic"><use href="#i-users"/></svg>Кандидаты</a>
+    <a href="tests.html" data-nav="tests"><svg class="ic"><use href="#i-flask"/></svg>Тестирование</a>
+    <a href="summary.html" data-nav="summary"><svg class="ic"><use href="#i-table"/></svg>Сводные таблицы</a>
+    <a href="library.html" data-nav="library"><svg class="ic"><use href="#i-folder"/></svg>Файлы</a>
+    <a href="method.html" data-nav="method"><svg class="ic"><use href="#i-book"/></svg>Методика</a>
+  </nav>
+</div></header>
+
+<main>
+<section class="page-head"><div class="wrap"><h1>Кандидаты</h1><p>Ищите по имени, фильтруйте по уровню, партии и статусу задания. Нажмите на кандидата, чтобы открыть профиль и скачать файлы.</p></div></section>
+<div class="wrap">
+  <div class="card toolbar">
+    <div class="toolbar-row">
+      <div class="search"><svg class="ic"><use href="#i-search"/></svg><input class="input" id="q" data-search type="search" placeholder="Поиск по имени, роли, уровню…" aria-label="Поиск"><span class="kbd">/</span></div>
+      <div class="seg" id="segView"><button data-v="cards" class="is-active"><svg class="ic"><use href="#i-grid"/></svg>Карточки</button><button data-v="table"><svg class="ic"><use href="#i-list"/></svg>Таблица</button></div>
+    </div>
+    <div class="toolbar-row"><div class="tab-list" id="groupTabs"></div></div>
+    <div class="toolbar-row">
+      <div class="seg" id="segBatch"><button data-v="all" class="is-active">Все партии</button><button data-v="old">Основная база</button><button data-v="new"><svg class="ic"><use href="#i-sparkles"/></svg>Новые</button></div>
+      <div class="seg" id="segStatus"><button data-v="all" class="is-active">Любое задание</button><button data-v="done">Сдали</button><button data-v="waiting">Ждём</button><button data-v="none">Не выдавалось</button></div>
+      <select class="select" id="sort" aria-label="Сортировка"><option value="group">Сначала сильные</option><option value="score">По баллу задания</option><option value="name">По имени (А–Я)</option></select>
+      <span class="spacer"></span><span class="result-info" id="info"></span><button class="btn btn-sm" id="reset"><svg class="ic"><use href="#i-x"/></svg>Сбросить</button>
+    </div>
+  </div>
+  <div class="cards" id="cards"></div>
+  <div class="card hidden" id="tableBox" style="margin-bottom:40px"><div class="table-wrap"><table class="tbl" id="tbl"></table></div></div>
+</div>
+</main>
+
+<footer class="site-footer"><div class="wrap footer-in"><span>Данные обновлены: <b data-generated></b></span><span>Сайт работает офлайн: откройте <b>index.html</b> в браузере</span></div></footer>
+
+<script src="js/icons.js"></script>
+<script src="js/data.js" charset="utf-8"></script>
+<script src="js/common.js"></script>
+<script src="js/candidates.js"></script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Сводные таблицы — Отбор аналитиков</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="summary">
+<header class="site-header"><div class="wrap header-in">
+  <a class="brand" href="index.html"><span class="brand-mark"><svg class="ic"><use href="#i-users"/></svg></span><span class="brand-text">Отбор аналитиков<small>Senior / Strong Senior</small></span></a>
+  <button class="nav-toggle" aria-label="Меню" aria-expanded="false"><svg class="ic"><use href="#i-menu"/></svg></button>
+  <nav class="nav" id="nav">
+    <a href="index.html" data-nav="home"><svg class="ic"><use href="#i-home"/></svg>Главная</a>
+    <a href="candidates.html" data-nav="candidates"><svg class="ic"><use href="#i-users"/></svg>Кандидаты</a>
+    <a href="tests.html" data-nav="tests"><svg class="ic"><use href="#i-flask"/></svg>Тестирование</a>
+    <a href="summary.html" data-nav="summary"><svg class="ic"><use href="#i-table"/></svg>Сводные таблицы</a>
+    <a href="library.html" data-nav="library"><svg class="ic"><use href="#i-folder"/></svg>Файлы</a>
+    <a href="method.html" data-nav="method"><svg class="ic"><use href="#i-book"/></svg>Методика</a>
+  </nav>
+</div></header>
+
+<main>
+<section class="page-head"><div class="wrap"><h1>Сводные таблицы</h1><p>Первичная оценка всех кандидатов: по уровням, общей сортируемой таблицей и в виде скачиваемых документов.</p></div></section>
+<div class="wrap">
+  <div data-tabs data-hash="tab">
+    <div class="tab-list" role="tablist">
+      <button class="tab is-active" data-tab="levels"><svg class="ic"><use href="#i-layers"/></svg>По уровням</button>
+      <button class="tab" data-tab="all"><svg class="ic"><use href="#i-table"/></svg>Общая таблица</button>
+      <button class="tab" data-tab="docs"><svg class="ic"><use href="#i-download"/></svg>Документы</button>
+    </div>
+    <div style="margin-top:18px">
+      <div class="tab-panel is-active" data-panel="levels" id="pLevels"></div>
+      <div class="tab-panel" data-panel="all">
+        <div class="card toolbar" style="position:static;margin-top:0">
+          <div class="toolbar-row">
+            <div class="search"><svg class="ic"><use href="#i-search"/></svg><input class="input" id="sq" data-search type="search" placeholder="Поиск по таблице…"><span class="kbd">/</span></div>
+            <div class="seg" id="sBatch"><button data-v="all" class="is-active">Все</button><button data-v="old">Основная база</button><button data-v="new">Новые</button></div>
+            <span class="result-info" id="sInfo"></span>
+          </div>
+        </div>
+        <div class="card"><div class="table-wrap"><table class="tbl" id="sTbl"></table></div></div>
+        <p class="muted small" style="margin-top:10px">Обозначения: <span class="sk y">✓</span> есть подтверждение в опыте · <span class="sk p">~</span> упомянуто поверхностно · <span class="sk n">–</span> нет. Нажмите на заголовок столбца, чтобы отсортировать.</p>
+      </div>
+      <div class="tab-panel" data-panel="docs"><div class="grid grid-2" id="pDocs"></div></div>
+    </div>
+  </div>
+</div>
+<div style="height:50px"></div>
+</main>
+
+<footer class="site-footer"><div class="wrap footer-in"><span>Данные обновлены: <b data-generated></b></span><span>Сайт работает офлайн: откройте <b>index.html</b> в браузере</span></div></footer>
+
+<script src="js/icons.js"></script>
+<script src="js/data.js" charset="utf-8"></script>
+<script src="js/common.js"></script>
+<script src="js/summary.js"></script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Отбор аналитиков — главная</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="home">
+<header class="site-header"><div class="wrap header-in">
+  <a class="brand" href="index.html"><span class="brand-mark"><svg class="ic"><use href="#i-users"/></svg></span><span class="brand-text">Отбор аналитиков<small>Senior / Strong Senior</small></span></a>
+  <button class="nav-toggle" aria-label="Меню" aria-expanded="false"><svg class="ic"><use href="#i-menu"/></svg></button>
+  <nav class="nav" id="nav">
+    <a href="index.html" data-nav="home"><svg class="ic"><use href="#i-home"/></svg>Главная</a>
+    <a href="candidates.html" data-nav="candidates"><svg class="ic"><use href="#i-users"/></svg>Кандидаты</a>
+    <a href="tests.html" data-nav="tests"><svg class="ic"><use href="#i-flask"/></svg>Тестирование</a>
+    <a href="summary.html" data-nav="summary"><svg class="ic"><use href="#i-table"/></svg>Сводные таблицы</a>
+    <a href="library.html" data-nav="library"><svg class="ic"><use href="#i-folder"/></svg>Файлы</a>
+    <a href="method.html" data-nav="method"><svg class="ic"><use href="#i-book"/></svg>Методика</a>
+  </nav>
+</div></header>
+
+<main>
+  <section class="hero"><div class="wrap">
+    <div class="hero-card" data-reveal>
+      <span class="badge b-g2"><svg class="ic"><use href="#i-sparkles"/></svg>Рабочее пространство отбора</span>
+      <h1 style="margin-top:14px">Отбор <span>Senior аналитика</span> в одном месте</h1>
+      <p>Все кандидаты, их резюме, тестовые задания, ответы и оценки. Кандидаты разделены по уровням, везде есть быстрый поиск и ссылки на скачивание исходных файлов.</p>
+      <form class="search" id="heroSearch" role="search"><svg class="ic"><use href="#i-search"/></svg><input class="input" data-search type="search" placeholder="Найти кандидата по имени, роли или уровню…" aria-label="Поиск кандидата"><span class="kbd">/</span></form>
+      <div class="row actions">
+        <a class="btn btn-primary" href="candidates.html"><svg class="ic"><use href="#i-users"/></svg>Все кандидаты</a>
+        <a class="btn" href="tests.html"><svg class="ic"><use href="#i-flask"/></svg>Результаты тестов</a>
+        <a class="btn" href="summary.html"><svg class="ic"><use href="#i-table"/></svg>Сводные таблицы</a>
+      </div>
+    </div>
+  </div></section>
+
+  <section class="section" style="padding-top:8px"><div class="wrap">
+    <div class="grid grid-5" id="statCards"></div>
+  </div></section>
+
+  <section class="section"><div class="wrap grid grid-2" style="align-items:start">
+    <div class="card pad" data-reveal>
+      <div class="section-head" style="margin-bottom:14px"><div><h2>Воронка отбора</h2><p>От всех резюме до подходящих к собеседованию</p></div></div>
+      <div class="funnel" id="funnel"></div>
+    </div>
+    <div class="card pad" data-reveal style="--d:80ms">
+      <div class="section-head" style="margin-bottom:6px"><div><h2>Лучшие результаты</h2><p>Тестовые задания, уже проверенные</p></div><a class="btn btn-sm" href="tests.html">Все результаты<svg class="ic"><use href="#i-right"/></svg></a></div>
+      <div id="leaders"></div>
+    </div>
+  </div></section>
+
+  <section class="section"><div class="wrap">
+    <div class="section-head"><div><h2>Кандидаты по уровням</h2><p>Нажмите на карточку, чтобы открыть список этой группы</p></div></div>
+    <div class="grid grid-4" id="levels"></div>
+  </div></section>
+
+  <section class="section"><div class="wrap grid grid-2" style="align-items:start">
+    <div class="card pad" data-reveal>
+      <div class="section-head" style="margin-bottom:6px"><div><h2>Ждём ответ на задание</h2><p>Кандидаты, получившие задание</p></div><span class="badge b-wait" id="waitCount"></span></div>
+      <div id="waiting"></div>
+    </div>
+    <div class="card pad" data-reveal style="--d:80ms">
+      <div class="section-head" style="margin-bottom:12px"><div><h2>Документы для скачивания</h2><p>Сводные таблицы и критерии проверки</p></div></div>
+      <div class="files" id="reports"></div>
+      <div class="row" style="margin-top:14px"><a class="btn btn-sm" href="library.html"><svg class="ic"><use href="#i-folder"/></svg>Все файлы кандидатов</a><a class="btn btn-sm" href="method.html"><svg class="ic"><use href="#i-book"/></svg>Как проходит отбор</a></div>
+    </div>
+  </div></section>
+</main>
+
+<footer class="site-footer"><div class="wrap footer-in"><span>Данные обновлены: <b data-generated></b></span><span>Сайт работает офлайн: откройте <b>index.html</b> в браузере</span></div></footer>
+
+<script src="js/icons.js"></script>
+<script src="js/data.js" charset="utf-8"></script>
+<script src="js/common.js"></script>
+<script src="js/home.js"></script>
+</body>
+</html>
